@@ -2,7 +2,6 @@ import React from "react";
 import "../styles/App.css";
 import ClassComponent from "../components/ClassComponent";
 import FunctionComponent from "../components/FunctionComponent";
-import image from "../img/irmaoJorel1.png";
 
 function App() {
   const [inputs, setInputs] = React.useState([
