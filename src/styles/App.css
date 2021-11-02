@@ -1,0 +1,146 @@
+body{
+  background-image: url('../img/background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+span{
+  font-weight: 900;
+}
+
+.App {
+  text-align: center;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.App-image{
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('../img/irmaoJorel3.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom center;
+}
+
+h1{
+  margin: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+
+
+.container-convidados{
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+ 
+}
+
+h3{
+  background-color: #fdd71e;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 0.5rem;
+}
+
+ul{
+  padding: 0px;
+}
+
+li{
+  list-style-type: none;
+  margin: 0.5rem;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+form{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.float-container{
+  position: relative;
+  display: inline;
+  margin: 0.5rem;
+}
+
+input[type=text]{
+  border: none;
+  height: 30px;
+  border-radius: 5px;
+  padding: 10px 8px 2px 8px;
+  background-color: rgba(255, 255, 255, 0);
+  border-bottom: 2px solid #595959;
+}
+
+.float-container label{
+  position: absolute;
+  z-index: 1;
+  left: 5px;
+  padding: 8px 2px;
+  color: #595959;
+}
+
+input[type=text]:focus ~label,
+input[type=text]:not(:placeholder-shown)~label{
+  font-size: 0.7rem;
+  padding: 2px;
+}
+
+input[type=text]:focus{
+  outline: #fdd71e 2px solid;
+  border: none;
+}
+
+.check-container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+input[type=checkbox]{
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+.check-container label{
+  font-weight: 500;
+}
+
+button{
+  background-color: #d76d55;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  padding: 0.6rem;
+  color: rgb(250, 250, 250);
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+button:hover{
+  cursor: pointer;
+  background-color: #c76550;
+  color: #fff;
+}
+
+button:active{
+  cursor: pointer;
+  background-color: #b35b47;
+  color: #fff;
+}
+
