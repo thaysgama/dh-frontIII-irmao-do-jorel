@@ -2,6 +2,7 @@ body{
   background-image: url('../img/background.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
 }
 
 span{
@@ -22,6 +23,7 @@ span{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: bottom center;
+  background-size: contain;
 }
 
 h1{
