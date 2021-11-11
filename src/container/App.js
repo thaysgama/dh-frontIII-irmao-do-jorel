@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Fragment} from "react";
 import "../styles/App.css";
 import ClassComponent from "../components/ClassComponent";
 import FunctionComponent from "../components/FunctionComponent";
@@ -6,31 +6,38 @@ import FunctionComponent from "../components/FunctionComponent";
 function App() {
   const [inputs, setInputs] = React.useState([
     {
+      id: 1,
       nome: "Vovó Juju",
       estaNaLista: true,
       tarefa: "abacate",
     },
-    {
+    { 
+      id:2,
       nome: "Lara",
       estaNaLista: false,
       tarefa: "pizza",
     },
     {
+      id:3,
       nome: "Ana Catarina",
       estaNaLista: true,
       tarefa: "bebidas",
     },
   ]);
+  const [count, setCount] = React.useState(4);
   const [input, setInput] = React.useState({
+    id: "",
     nome: "",
     estaNaLista: true,
     tarefa: "",
   });
+  
 
   function handleSubmit(e) {
     e.preventDefault();
-
+    setCount(count + 1);
     const newConvidado = {
+      id: count,
       nome: input.nome,
       estaNaLista: input.estaNaLista,
       tarefa: input.tarefa,
@@ -87,11 +94,28 @@ function App() {
 
           <h3>Convidado:</h3>
           <ul>
-            <ClassComponent inputs={inputs} />
+            {
+              inputs.map((aluno)=>{
+                return (
+                  <Fragment key={aluno.id}>
+                  <ClassComponent aluno={aluno} />
+                  </Fragment>
+                  )
+              })
+            }
+            
           </ul>
           <h3>Tarefas: </h3>
           <ul>
-            <FunctionComponent inputs={inputs} />
+            {
+              inputs.map((aluno)=>{
+                return (
+                  <Fragment key={aluno.id}>
+                  <FunctionComponent aluno={aluno} />
+                  </Fragment>
+                )
+              })
+            }
           </ul>
         </div>
       </div>

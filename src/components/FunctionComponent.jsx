@@ -1,8 +1,8 @@
 import React from 'react'
  
-const FunctionComponent = (props) => {
+const FunctionComponent = ({aluno}) => {
    return (
-       props.inputs.map(element=> <li>{element.nome} trará {element.tarefa}</li>)
+       <li>{aluno.nome} trará {aluno.tarefa}</li>
    )
 }
 export default FunctionComponent
